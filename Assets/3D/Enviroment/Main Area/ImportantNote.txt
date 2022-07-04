@@ -1,0 +1,5 @@
+yang Main-area.unitypackage itu udah gw apply texture secara manual
+di Unity jadi bisa di adjust texturenya yang lain jika you want go
+secara inisiatif.
+
+ngl you've broke my heart here and i feel frustrated
