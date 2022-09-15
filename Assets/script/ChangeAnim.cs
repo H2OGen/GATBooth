@@ -5,17 +5,29 @@ using UnityEngine;
 public class ChangeAnim : MonoBehaviour
 {
     public Animator m_Animator;
-    // Start is called before the first frame update
+    public string AnimName1;
+    public GameObject Button;
+    public GameObject NPCMale;
     void Start()
     {
-        m_Animator = gameObject.GetComponent<Animator>();
+       
+        m_Animator = NPCMale.gameObject.GetComponent<Animator>();
     }
 
     // Update is called once per frame
     public void Click()
     {
-        m_Animator.SetTrigger("Salute");
-        
+        if(m_Animator.GetBool("Salute") == false)
+        {
+            m_Animator.SetTrigger(AnimName1);
+        }
+       else if(m_Animator.GetBool("Salute") == true)
+        {
+            m_Animator.ResetTrigger(AnimName1);
+        }
+        //Button.SetActive(false);
+
+
     }
    
 }
